@@ -26,37 +26,20 @@
                 {name: 'Raquel Benito', T1: true, T2: true, T3: true}
       ]
             
+   
+     for (const alumn of  alumns) {
+        if (alumn.T1 + alumn.T2 + alumn.T3 >= 2) {
+            alumn.isApproved = true;
+            
+        } else {
+            alumn.isApproved = false ;
+        }
+     }console.log(alumns);
      
-      let menosalums= alumns.filter(alumns => alumns.name != 'Pepe Viruela'   );
-      let menosalums1 = menosalums.filter(alumns => alumns.name != 'Alfredo Blanco' );   
-      
-     
-      
-      let isApproved = true ;
-      menosalums1.forEach((menosalums1)=>{
-         
-          menosalums1.isApproved = true;
-     })
-      console.log(menosalums1);
 
 
-      let nopasa =  alumns.filter(alumns => alumns.name != 'Lucia Aranda'   );
-     let nopasa1 =  nopasa.filter(nopasa => nopasa.name !=  'Juan Miranda'  );
-      let nopasa2 =  nopasa1.filter(nopasa1 => nopasa1.name !=  'Raquel Benito' );
-      
-     
-      
-      let noApproved = false;
-
-      nopasa2.forEach((nopasa2)=>{
-         
-          nopasa2.noApproved = false;
-     })
-      console.log(nopasa2);
-      
 
       
-             
        
          //3: Probando For...of
 
@@ -132,12 +115,20 @@
 	 {id: 40, name: 'El gato con Guantes', sellCount: 8},
 	 {id: 40, name: 'El gato felix', sellCount: 35}
       ]
-      
-      const popularToys1 = []
-      
-      for (const element of toys1) {
-       let menostoys = 
-          
+
+      const popularToys = [];
+
      
-     
-     }
+      for (const e of toys1) {
+
+        
+       
+
+
+        
+        
+      }
+      
+      
+      
+      
