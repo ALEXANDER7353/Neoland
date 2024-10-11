@@ -116,18 +116,37 @@
 	 {id: 40, name: 'El gato felix', sellCount: 35}
       ]
 
+     
       const popularToys = [];
-
      
       for (const e of toys1) {
-
+        let toys  = toys1.map(function (toys1) {
+            return toys1.sellCount >= 15; 
+        });
+                
         
+       
+            }
+            const popularToys1 = toys.concat(popularToys)
+            console.log(popularToys1);
+            
+            
+          
+           
+            
+        
+          
+          
+
+
+   
+
        
 
 
         
         
-      }
+      
       
       
       
