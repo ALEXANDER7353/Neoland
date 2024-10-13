@@ -96,10 +96,18 @@
       ]
 
       for (const element of toys) {
-      let menostoys = toys.splice(3,4)
+       let menostoys = toys.splice(3, 4);
+       console.log(menostoys);
+       
+        
+
+        
+        
+      
+       
      
      }
-      console.log(toys);
+      
 
 
       //7: For...of avanzado
