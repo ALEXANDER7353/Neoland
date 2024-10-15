@@ -15,14 +15,9 @@
     ]      
 
 
-    for (const elemento of movies) {
-    
-
-
-
-
-
-    }
+    for (const e of movies) {
+        
+ }
 
     
       

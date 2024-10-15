@@ -1,47 +1,239 @@
-                      curriculum
-
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum de [Guillermo Alexander Zapata Calderon]</title>
-</head>
-
-<body>
-    <header>
-        <h1>Alexander </h1>
-        <p>Dirección: Calle Mayor 6 1B, Burlada, España</p>
-        <p>Teléfono: +34 651170404</p>
-        <p>Email: <a href="alexanderzapata@email.com">tunombre@email.com</a></p>
-    </header>
-
-    <section>
-        <h2>Perfil Profesional</h2>
-        <p>Profesional dedicado con experiencia en desarrollo web y habilidades avanzadas en HTML, CSS y JavaScript.
-            Apasionado por aprender nuevas tecnologías y mejorar constantemente.</p>
-    </section>
-
-    <section>
-        <h2>Experiencia Laboral</h2>
-        <ul>
-            <li>
-                <h3>Desarrollador Web en Empresa XYZ</h3>
-                <p>Enero 2020 - Actualidad</p>
-                <ul>
-                    <li>Desarrollé aplicaciones web utilizando JavaScript, HTML y CSS.</li>
-                    <li>Colaboré con diseñadores para crear interfaces de usuario eficientes.</li>
-                    <li>Implementé soluciones de backend utilizando Node.js y Express.</li>
-                </ul>
-            </li>
-            <li>
-                <h3>Asistente de Soporte Técnico en Empresa ABC</h3>
-                <p>Marzo 2018 - Diciembre 2019</p>
-                <ul>
-                    <li>Resolví problemas técnicos de hardware y software para clientes.</li>
-                    <li>Proporcioné asistencia remota a través de herramientas de soporte.</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+curriculum
+                      <!DOCTYPE html> <!-- Define el documento como HTML5 -->
+                      <html lang="es"> <!-- Establece el idioma del contenido como español -->
+                      
+                      <head>
+                          <meta charset="UTF-8"> <!-- Define el juego de caracteres como UTF-8 para soportar caracteres especiales -->
+                          <title>Currículum Vitae Alexander Zapata Calderon</title> <!-- Título de la página que aparece en la pestaña del navegador -->
+                          <link rel="stylesheet" href="estilos.css"> <!-- Vincula una hoja de estilo externa llamada "estilos.css" -->
+                          <style>
+                              /* Estilo básico para la tabla */
+                              table,
+                              th,
+                              td {
+                                  border: 1px solid rgb(35, 34, 34);
+                                  /* Agrega un borde negro a la tabla, celdas y encabezados */
+                                  border-collapse: collapse;
+                                  /* Colapsa los bordes para evitar bordes dobles */
+                                  padding: 8px;
+                                  /* Añade espacio interior a las celdas */
+                              }
+                      
+                              th {
+                                  background-color: #f2f2f2;
+                                  /* Define un fondo gris claro para las celdas de encabezado */
+                              }
+                      
+                              caption {
+                                  font-weight: bold;
+                                  /* Hace el texto de la leyenda de la tabla en negrita */
+                                  margin-bottom: 8px;
+                                  /* Añade un margen inferior a la leyenda */
+                              }
+                          </style>
+                      </head>
+                      
+                      <body onload="mostrarMensajeCarga()"> <!-- Ejecuta la función mostrarMensajeCarga() al cargar la página -->
+                      
+                          <!-- Encabezado del CV -->
+                          <header id="header"> <!-- Define el encabezado del documento -->
+                              <h1>Alexander Zapata Calderon</h1> <!-- Título del CV con el nombre del titular -->
+                              <p contenteditable="true">Desarrollador Web Full Stack</p> <!-- Descripción editable del perfil profesional -->
+                              <img src=" " alt="Foto de perfil de Alexander Zapata" title="Foto de Alexander Zapata"
+                                  width="150" onclick="alert('¡Has hecho clic en la foto!')">
+                              <!-- Imagen de perfil con un alert al hacer clic -->
+                          </header>
+                      
+                          <!-- Mensaje que se mostrará al cargar la página -->
+                          <div id="mensajeCarga" style="display: none; color: rgb(31, 225, 202);">
+                              <!-- Mensaje oculto por defecto que se muestra al cargar la página -->
+                              ¡Página cargada con éxito!
+                          </div>
+                      
+                          <!-- Sección de contacto -->
+                          <section id="contacto" class="seccion"> <!-- Sección de contacto con información básica -->
+                              <h2>Contacto</h2> <!-- Título de la sección de contacto -->
+                              <p>Email: <a href="mailto:zapataalexander693@gmail.com" accesskey="E">zapataalexander693@gmail.com</a></p>
+                              <!-- Enlace de correo electrónico con una tecla de acceso rápido -->
+                              <p>Teléfono: <a href="tel:+34651170404">+34651170404</a></p>
+                              <!-- Enlace que permite realizar una llamada telefónica -->
+                              <!-- Enlace a LinkedIn que abre en una nueva pestaña -->
+                          </section>
+                      
+                          <!-- Sección de educación -->
+                          <section id="educacion" class="seccion"> <!-- Sección de educación con títulos académicos -->
+                              <h2>Educación</h2> <!-- Título de la sección de educación -->
+                              <article>
+                                  <h3></h3> <!-- Nombre del título académico -->
+                                  <p></p> <!-- Detalles de la institución y duración del estudio -->
+                              </article>
+                              <article>
+                                  <h3></h3>
+                                  <p></p>
+                              </article>
+                          </section>
+                      
+                          <!-- Sección de experiencia laboral con detalles desplegables -->
+                          <section id="experiencia" class="seccion"> <!-- Sección de experiencia laboral con detalles desplegables -->
+                              <h2>Experiencia Profesional</h2> <!-- Título de la sección de experiencia -->
+                              <details> <!-- Elemento desplegable que muestra detalles al hacer clic -->
+                                  <summary></summary> <!-- Título del elemento desplegable -->
+                                  <p></p>
+                                  <ul>
+                                      <li>Desarrollo y mantenimiento de aplicaciones web.</li> <!-- Tareas y responsabilidades -->
+                                      <li>Implementación de APIs RESTful y GraphQL.</li>
+                                      <li>Optimización de rendimiento en aplicaciones críticas.</li>
+                                  </ul>
+                              </details>
+                              <details>
+                                  <summary>Desarrollador Web Junior en Soft Solutions</summary>
+                                  <p>2019 - 2020</p>
+                                  <ul>
+                                      <li>Colaboración en proyectos de desarrollo de software.</li>
+                                      <li>Soporte técnico y mejoras en aplicaciones web existentes.</li>
+                                      <li>Desarrollo de pruebas unitarias para aplicaciones.</li>
+                                  </ul>
+                              </details>
+                          </section>
+                      
+                          <!-- Sección de habilidades con gráficos en canvas -->
+                          <section id="habilidades" class="seccion"> <!-- Sección de habilidades con un canvas para gráficos -->
+                              <h2>Habilidades</h2>
+                              <canvas id="habilidadesCanvas" width="300" height="150"></canvas> <!-- Canvas para gráficos de habilidades -->
+                          </section>
+                      
+                          <!-- Sección multimedia -->
+                          <section id="multimedia" class="seccion"> <!-- Sección con elementos multimedia como video y audio -->
+                              <h2>Proyectos Audiovisuales</h2>
+                              <video controls width="300"> <!-- Elemento de video con controles -->
+                                  <source src="https://youtu.be/5DWAK121IrE?si=Q1Lb-TzueFyyu0wt" type="video/mp4">
+                                  <!-- Fuente de video en formato MP4 -->
+                                  Tu navegador no soporta la reproducción de videos.
+                              </video>
+                              <audio controls> <!-- Elemento de audio con controles -->
+                                  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+                                  <!-- Fuente de audio en formato MP3 -->
+                                  Tu navegador no soporta la reproducción de audio.
+                              </audio>
+                          </section>
+                      
+                          <!-- Sección de formulario de contacto con tipos avanzados -->
+                          <section id="formulario_contacto" class="seccion"> <!-- Sección de formulario de contacto -->
+                              <h2>Contáctame</h2>
+                              <form action="/submit_form" method="post"> <!-- Formulario que envía los datos mediante POST -->
+                                  <label for="nombre">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+                                  <input type="text" id="nombre" name="nombre" required>
+                                  <!-- Campo de texto para el nombre, con eventos de foco y blur -->
+                      
+                                  <label for="email">Email:</label>
+                                  <input type="email" id="email" name="email" required>
+                                  <!-- Campo de texto para email con validación de correo -->
+                      
+                                  <!-- Checkbox para aceptar términos -->
+                                  <label><input type="checkbox" name="terminos" required> Acepto los términos y condiciones</label>
+                                  <!-- Checkbox que obliga aceptar los términos antes de enviar -->
+                      
+                                  <!-- Radio para selección de preferencia -->
+                                  <p>Prefiero contacto por:</p> <!-- Título para los botones de radio -->
+                                  <label><input type="radio" name="contacto" value="email" checked>Email</label>
+                                  <!-- Botón de radio para seleccionar email como preferencia de contacto -->
+                                  <label><input type="radio" name="contacto" value="telefono">Teléfono</label>
+                                  <!-- Botón de radio para seleccionar teléfono como preferencia de contacto -->
+                      
+                                  <!-- Select con optgroup para elegir ubicación -->
+                                  <label for="ubicacion">Ubicación:</label> <!-- Etiqueta para el campo de ubicación -->
+                                  <select name="ubicacion" id="ubicacion"> <!-- Lista desplegable con opciones agrupadas -->
+                                      <optgroup label="Europa"> <!-- Grupo de opciones bajo la etiqueta Europa -->
+                                          <option value="madrid">Madrid</option>
+                                          <option value="paris">París</option>
+                                      </optgroup>
+                                      <optgroup label="América">
+                                          <option value="bogota">Bogotá</option>
+                                          <option value="santiago">Santiago</option>
+                                      </optgroup>
+                                  </select>
+                      
+                                  <!-- Datalist para sugerencias de roles -->
+                                  <label for="rol">Puesto deseado:</label> <!-- Etiqueta para el campo de puesto deseado -->
+                                  <input type="text" list="roles" id="rol" name="rol"> <!-- Campo de texto con sugerencias de datalist -->
+                                  <datalist id="roles"> <!-- Lista de sugerencias para el campo de texto -->
+                                      <option value="Desarrollador Web"></option>
+                                      <option value="Ingeniero de Software"></option>
+                                      <option value="Administrador de Sistemas"></option>
+                                  </datalist>
+                      
+                                  <button type="submit">Enviar</button> <!-- Botón para enviar el formulario -->
+                              </form>
+                          </section>
+                      
+                          <!-- Botones para mostrar diálogos -->
+                          <button onclick="document.getElementById('bienvenidaDialog').showModal()">Mostrar Bienvenida</button>
+                          <!-- Botón que muestra un diálogo modal de bienvenida -->
+                          <dialog id="bienvenidaDialog"> <!-- Define un diálogo modal -->
+                              <p>¡Bienvenido al CV Alexander Zapata!</p>
+                              <button onclick="document.getElementById('bienvenidaDialog').close()">Cerrar</button>
+                              <!-- Botón para cerrar el diálogo -->
+                          </dialog>
+                      
+                          <!-- Sección de tabla de proyectos -->
+                          <section id="proyectos" class="seccion"> <!-- Sección de proyectos completados con una tabla -->
+                              <h2>Proyectos Completados</h2>
+                              <table>
+                                  <caption>Resumen de proyectos</caption> <!-- Leyenda para la tabla -->
+                                  <thead>
+                                      <tr>
+                                          <th>Proyecto</th> <!-- Encabezado para el nombre del proyecto -->
+                                          <th>Cliente</th> <!-- Encabezado para el cliente del proyecto -->
+                                          <th>Duración (meses)</th> <!-- Encabezado para la duración del proyecto -->
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>Sitio Web Corporativo</td>
+                                          <td>Empresa X</td>
+                                          <td>6</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Aplicación E-commerce</td>
+                                          <td>Empresa Y</td>
+                                          <td>8</td>
+                                      </tr>
+                                  </tbody>
+                                  <tfoot>
+                                      <tr>
+                                          <td colspan="3" style="text-align: center;">Total de Proyectos: 2</td>
+                                          <!-- Fila del pie de la tabla con un colspan para abarcar las tres columnas -->
+                                      </tr>
+                                  </tfoot>
+                              </table>
+                          </section>
+                      
+                          <!-- Pie de página -->
+                          <footer id="footer">
+                              <p>&copy; Alexander Zapata</p> <!-- Información de derechos de autor -->
+                              <p>Todos los derechos reservados</p>
+                          </footer>
+                      
+                          <!-- Script para manejar eventos y el canvas -->
+                          <script>
+                              // Función para mostrar el mensaje de carga
+                              function mostrarMensajeCarga() {
+                                  document.getElementById("mensajeCarga").style.display = "block"; // Muestra el mensaje oculto al cargar
+                              }
+                      
+                              // Acceso al elemento canvas y contexto 2D para dibujar
+                              const canvas = document.getElementById('habilidadesCanvas');
+                              const ctx = canvas.getContext('2d');
+                              ctx.fillStyle = 'blue'; // Define el color de relleno para el rectángulo
+                              ctx.fillRect(10, 10, 100, 20); // Dibuja un rectángulo azul como barra de habilidad
+                              ctx.fillText("HTML5", 10, 50); // Escribe texto dentro del canvas
+                      
+                              // Cambia el color del pie de página al hacer clic en él
+                              document.getElementById("footer").addEventListener("click", function () {
+                                  this.style.color = "blue"; // Cambia el color del texto del pie a azul
+                              });
+                      
+                          </script>
+                      </body>
+                      
+                      </html>
