@@ -1,0 +1,72 @@
+Aplicar los siguientes estilos haciendo un uso correcto de selectores:
+
+- Todos los elementos del documento tienen que tener un padding 0 y un margin 0.
+- Todos los elementos del documento tienen que tener un font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif.
+- El cuerpo del documento debe de tener un color de fondo “lightcyan”.
+- La etiqueta main tiene que tener un padding-top y un padding-left de 1 rem y el color del texto “black”.
+- Tanto el ul como el ol deben tener un padding-left de 2rem.
+- Los elementos con la clase like deben de tener un color “green”.
+- Los li de la ol deben de tener el color “crimson”.
+- Particularemente, el elemento con la clase thunder debe de tener el color “purple”.
+- El anchor tiene que tener un color “plum” y un font-style: italic.
+- Los h3 deben de tener también el font-style: italic.
+- La imagen debe de tener un border-radius de 1 rem.
+
+
+
+/* Restablece el padding y el margin en todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Define la fuente global */
+  }
+  
+  /* Estilo para el cuerpo del documento */
+  body {
+    background-color: #4508AD; /* Color de fondo claro */
+  }
+  
+  /* Estilo para el contenedor principal */
+  main {
+    padding-top: 1rem; /* Espacio superior */
+    padding-left: 1rem; /* Espacio a la izquierda */
+    color: black; /* Color de texto negro */
+  }
+  
+  /* Estilo para listas no ordenadas y ordenadas */
+  ul, ol {
+    padding-left: 2rem; /* Espaciado a la izquierda para las listas */
+  }
+  
+  /* Estilo para elementos con la clase "like" */
+  .like {
+    color: green; /* Color verde para los elementos gustados */
+  }
+  
+  /* Estilo para elementos de lista dentro de la lista ordenada (ol) */
+  ol li {
+    color: crimson; /* Color carmesí para dislikes */
+  }
+  
+  /* Estilo específico para el elemento con la clase "thunder" */
+  .thunder {
+    color: purple; /* Color púrpura solo para este elemento */
+  }
+  
+  /* Estilo para enlaces */
+  a {
+    color: plum; /* Color ciruela para el enlace */
+    font-style: italic; /* Texto en cursiva */
+  }
+  
+  /* Estilo para los encabezados h3 */
+  h3 {
+    font-style: italic; /* Texto en cursiva */
+  }
+  
+  /* Estilo para la imagen */
+  img {
+    border-radius: 1rem; /* Bordes redondeados */
+  }
+  
+	
