@@ -1,8 +1,8 @@
 function agregarParrafo() {
     
-    var contenedor = document.getElementById('contenedor');
+    const contenedor = document.getElementById('contenedor');
     
-    var nuevoParrafo = document.createElement('p');
+    const nuevoParrafo = document.createElement('p');
    
     nuevoParrafo.textContent = 'Nuevo párrafo';
    
