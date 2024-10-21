@@ -76,11 +76,17 @@ const products = ['Camiseta de Pokemon', 'Pantalón coquinero', 'Gorra de gansta
     const elementos = [{id: 5, name: 'Japan'}, {id: 11, name: 'Venecia'}, {id: 23, name: 'Murcia'},
          {id: 40, name: 'Santander'}, {id: 44, name: 'Filipinas'}, {id: 59, name: 'Madagascar'}]
 
-    let menoselemtos=elementos.splice (1,1)
-
-    let nuevosDeportes = elementos.splice (2,1)
-
-    console.log(elementos);
+         //Usamos un bucle for para recorrer el array
+         for (let i = elementos.length - 1; i >= 0; i--) {
+             // Comprobamos si el id es 11 o 40
+             if (elementos[i].id === 11 || elementos[i].id === 40) {
+                 // Eliminamos el elemento del array
+                 elementos.splice(i, 1);
+             }
+         }
+         
+         // Imprimimos el array resultante
+         console.log(elementos);
 
 
     // 6: Mixed For...of e includes
