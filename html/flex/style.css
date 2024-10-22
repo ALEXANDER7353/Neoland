@@ -1,0 +1,47 @@
+.container {
+    display: flex; /* Activa Flexbox */
+    border: 2px solid #333;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo base para los elementos flexibles */
+  .item {
+    background-color: #0056b3;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 4px;
+  }
+  
+  #container1 {
+    flex-direction: row; /* Cambia a column para ver la distribución vertical */
+  }
+  
+  #container2 {
+    justify-content: space-around; /* Cambia a flex-start, center, space-around, etc. */
+  }
+  
+  #container3 {
+    align-items: flex-start; /* Prueba con flex-start, flex-end, stretch */
+  }
+  
+  #container4 {
+    flex-wrap: nowrap; /* Cambia a nowrap para ver cómo se mantiene en una sola línea */
+  }
+  
+  /* container5: Define cómo los elementos crecen o se encogen */
+  #container5 .item:nth-child(1) {
+    flex-grow: 1; /* Primer elemento crece con valor 1 */
+  }
+  #container5 .item:nth-child(2) {
+    flex-grow: 2; /* Segundo elemento crece el doble que los otros */
+  }
+  #container5 .item:nth-child(3) {
+    flex-grow: 1; /* Tercer elemento crece con valor 1 */
+  }
+  
+  #container6 .item:nth-child(2) {
+    align-self: flex-end; /* Cambia a center, stretch o flex-start para ver cómo afecta al elemento individualmente */
+  }
+  
