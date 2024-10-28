@@ -96,6 +96,10 @@ const averageVolume = totalVolume / soundCount;
 // Mostramos la media del volumen en la consola
 console.log(`La media del volumen de los sonidos favoritos es: ${averageVolume}`);
 
+
+
+//
+
       
         
          
