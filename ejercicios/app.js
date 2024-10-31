@@ -1,4 +1,4 @@
- //### Enunciado:
+//### Enunciado:
 
 //Imagina que tienes dos variables, `firstName` y `lastName`, que contienen el nombre y apellido de una persona. Tu tarea es crear una función `formatName()` que haga lo siguiente:
 
@@ -14,11 +14,11 @@ let lastName = "calderon";
 function formatName() {
     let fullName = `${firstName} ${lastName}`;
     console.log(fullName);
-    
-let upperName = fullName.toUpperCase()
-console.log(upperName);
 
-if (upperName) { "Skywalker"
+    let upperName = fullName.toUpperCase()
+    console.log(upperName);
+
+if (upperName.includes ("Skywalker")) { 
     console.log("si es un Skywalker");
     
     
@@ -29,6 +29,31 @@ if (upperName) { "Skywalker"
 
 
 
+    
+ }
 
+
+
+ //Tienes un string `welcomeMessage` que contiene una frase de bienvenida con espacios al principio y al final. También contiene la palabra "Force" en minúsculas y deseas estandarizarla. Crea una función `cleanMessage()` que haga lo siguiente:
+
+//1. Eliminar los espacios al principio y al final del string usando `.trim()`.
+//2. Reemplazar todas las apariciones de la palabra "Force" por "Force" en mayúscula (usando `.replaceAll()`).
+//3. Convertir la primera letra de cada palabra a mayúscula y el resto a minúsculas.
+//4. Imprimir el mensaje limpio y formateado.
+
+
+let welcomeMessage = "  este es el grupo de force  ";
+
+function cleanMessage(welcomeMessage) {
+    
+   let cleanedMessage = welcomeMessage.trim();
+    
+   cleanedMessage = cleanedMessage.replace("force", "Force");
+
+cleanMessage.map( (word) => word [0].toUpperCase () + word.slice(1)).join("");
+console.log(cleanMessage);
+
+
+  
 }
-     
+
