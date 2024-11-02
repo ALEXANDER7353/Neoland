@@ -157,7 +157,7 @@ console.log('SUMA MIX 🫱', sumaMix(mix));
   console.log(result1);
   
  
-
+ 
  
  
 
