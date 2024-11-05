@@ -163,15 +163,8 @@ function eliminarAliadoSiEsObiWan(data) {
 
 
 
- 
 
-
-
-
-
-
-
-//### **Ejercicio 5: Cambiar la especie de Darth Vader a "Sith" si su nombre es "Anakin Skywalker"**
+    //### **Ejercicio 5: Cambiar la especie de Darth Vader a "Sith" si su nombre es "Anakin Skywalker"**
 
 //#### Enunciado
 
@@ -188,8 +181,27 @@ function eliminarAliadoSiEsObiWan(data) {
    //- Paso 2: Verificar si `name` es "Anakin Skywalker".
    //- Paso 3: Si se cumple la condición, cambiar `species` a "Sith".
 function cambiEspecie (data) {
-    let nuevaEspecie = data.movie.characters.villain;
-    console.log("🚀 ~ cambiEspecie ~ nuevaEspecie:", nuevaEspecie)
+  let nuevaEspecie = data.movie.characters.villain;
+ 
+  if (nuevaEspecie.species  === "Anakin Skywalker" ) {
+      nuevaEspecie.species ="Sith" ;
+    }
     
+  }
+  console.log(cambiEspecie(starWarsInfo));
+  console.log(starWarsInfo.movie.characters.villain.species);
+  
+
+
+
+ 
+
+
+
+
+
+
+
+
     
-}
+
