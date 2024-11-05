@@ -65,17 +65,8 @@ const starWarsInf1 = {
   };
 
   function cambioPlaneta(data){
-    return data.movie.main;
-    
-   
-    
-
-
-    
-     
-
-     
-    
-  }
+        let luka = data.movie.characters.main.homeworld = "Dagobah"
+        console.log("🚀 ~ cambioPlaneta ~ luka:", luka)
+     }
  console.log(cambioPlaneta(starWarsInf1));
  
