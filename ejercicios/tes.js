@@ -1,7 +1,3 @@
-// ### **Ejercicio 1: Acceder a un valor específico**
-// #### Enunciado
-// Queremos acceder al nombre del director de la película.
-
 const starWarsInfo = {
     movie: {
       title: "A New Hope",
@@ -23,90 +19,40 @@ const starWarsInfo = {
       },
     },
   };
-
-
-  function director (data) {
-    let nombre  = data.movie.director
-    console.log("🚀 ~ director ~ nombre:", nombre)
-    
-   
-    
-  }
-director(starWarsInfo)
- 
-
-
-  //### **Ejercicio 2: Modificar un valor específico**
+  
+  //### **Ejercicio 5: Cambiar la especie de Darth Vader a "Sith" si su nombre es "Anakin Skywalker"**
 
 //#### Enunciado
 
-//Queremos cambiar el nombre del planeta natal de Luke Skywalker a "Dagobah".
+//Queremos cambiar la especie de Darth Vader a "Sith", pero solo si su nombre es "Anakin Skywalker".
 
-const starWarsInf1 = {
-    movie: {
-      title: "A New Hope",
-      release_year: 1977,
-      director: "George Lucas",
-      characters: {
-        main: {
-          name: "Luke Skywalker",
-          homeworld: "Tatooine",
-          species: "Human",
-          allies: ["Han Solo", "Leia Organa", "Obi-Wan Kenobi"],
-        },
-        villain: {
-          name: "Darth Vader",
-          homeworld: "Tatooine",
-          species: "Human",
-          allies: ["Emperor Palpatine"]
-        }
-      },
-    },
-  };
+//1. **Leer y comprender el enunciado**
 
-  function cambioPlaneta(data){
-        let luka = data.movie.characters.main.homeworld = "Dagobah";
-        console.log("🚀 ~ cambioPlaneta ~ luka:", luka);
-     }
- console.log(cambioPlaneta(starWarsInf1));
+   //- Objetivo: Cambiar `species` de Darth Vader a "Sith" solo si su `name` es "Anakin Skywalker".
+   //- Datos iniciales: JSON `starWarsInfo`, el nombre y la especie están en `movie.characters.villain`.
+
+//2. **Dividir el problema en partes**
+
+   //- Paso 1: Acceder a `movie.characters.villain`.
+   //- Paso 2: Verificar si `name` es "Anakin Skywalker".
+   //- Paso 3: Si se cumple la condición, cambiar `species` a "Sith".
+function cambiEspecie (data) {
+    let nuevaEspecie = data.movie.characters.villain;
+   
+    if (nuevaEspecie.species  === "Anakin Skywalker" ) {
+        nuevaEspecie.species ="Sith" ;
+      }
+      
+    }
+    console.log(cambiEspecie(starWarsInfo));
+    console.log(starWarsInfo.movie.characters.villain.species);
+    
+    
+    
+    
 
 
 
- //Queremos agregar un nuevo aliado, "Chewbacca", al array de aliados de Luke Skywalker.
- 
-function aliado(data) {
-  let nuevoAliado = data.movie.characters.main.allies;
-  nuevoAliado.push("Chewbacca");
-  console.log("🚀 ~ nuevoAliado:", nuevoAliado);
-
-}
-console.log(aliado(starWarsInf1));
 
 
 
-//Queremos cambiar el nombre de "Darth Vader" a "Anakin Skywalker" en el JSON.
-
-function nombre (data) {
-  
-  let cambioNombre = data.movie.characters.villain.name = "Anakin Skywalker";
- 
-  console.log("🚀 ~ nombre ~ cambioNombre:", cambioNombre);
- 
- 
-}console.log(nombre(starWarsInf1));
-
-
-
-//Queremos actualizar el año de estreno de la película de 1977 a 1978.
-
-function Año (data) {
-  
-  let nuevoAño = data.movie.release_year = 1978;
-  console.log("🚀 ~ Año ~ nuevoAño:", nuevoAño)
-  
-  
-} console.log("🚀 ~ Año ~ Año:", Año(starWarsInf1))
-
-
-
- 

@@ -72,3 +72,8 @@ console.log("🚀 ~ processCharacters ~ unirarray:", unirarray)
 
   
 }
+
+
+
+
+
