@@ -1,30 +1,26 @@
 //### Ejemplo de JSON Complejo (Datos de Star Wars)
 
-
 const starWarsInfo = {
-    movie: {
-      title: "A New Hope",
-      release_year: 1977,
-      director: "George Lucas",
-      characters: {
-        main: {
-          name: "Luke Skywalker",
-          homeworld: "Tatooine",
-          species: "Human",
-          allies: ["Han Solo", "Leia Organa", "Obi-Wan Kenobi"],
-        },
-        villain: {
-          name: "Darth Vader",
-          homeworld: "Tatooine",
-          species: "Human",
-          allies: ["Emperor Palpatine"],
-        },
+  movie: {
+    title: "A New Hope",
+    release_year: 1977,
+    director: "George Lucas",
+    characters: {
+      main: {
+        name: "Luke Skywalker",
+        homeworld: "Tatooine",
+        species: "Human",
+        allies: ["Han Solo", "Leia Organa", "Obi-Wan Kenobi"],
+      },
+      villain: {
+        name: "Darth Vader",
+        homeworld: "Tatooine",
+        species: "Human",
+        allies: ["Emperor Palpatine"],
       },
     },
-  };
-  
-
-
+  },
+};
 
 //### **Ejercicio 1: Modificar el planeta natal si el personaje es "Luke Skywalker"**
 
@@ -34,30 +30,28 @@ const starWarsInfo = {
 
 //1. **Leer y comprender el enunciado**
 
-   //- Objetivo: Cambiar el `homeworld` de Luke solo si actualmente es "Tatooine".
-   //- Datos iniciales: JSON `starWarsInfo`, la información está en `movie.characters.main.homeworld`.
+//- Objetivo: Cambiar el `homeworld` de Luke solo si actualmente es "Tatooine".
+//- Datos iniciales: JSON `starWarsInfo`, la información está en `movie.characters.main.homeworld`.
 
 //2. **Dividir el problema en partes**
 
-   //- Paso 1: Acceder a `movie.characters.main`.
-   //- Paso 2: Usar un condicional para verificar si `homeworld` es "Tatooine".
-   //- Paso 3: Si se cumple la condición, cambiar `homeworld` a "Dagobah".
+//- Paso 1: Acceder a `movie.characters.main`.
+//- Paso 2: Usar un condicional para verificar si `homeworld` es "Tatooine".
+//- Paso 3: Si se cumple la condición, cambiar `homeworld` a "Dagobah".
 
 //3. **Código**
 
 function cambiarPlanetaSiEsLuke(data) {
-    const luke = data.movie.characters.main;
-  
-    if (luke.name === "Luke Skywalker" && luke.homeworld === "Tatooine") {
-      luke.homeworld = "Dagobah";
-    }
-  }
-  
-  // Probamos la función
-  cambiarPlanetaSiEsLuke(starWarsInfo);
-  console.log(starWarsInfo.movie.characters.main.homeworld); // Debería imprimir "Dagobah" si era "Tatooine"
-  
+  const luke = data.movie.characters.main;
 
+  if (luke.name === "Luke Skywalker" && luke.homeworld === "Tatooine") {
+    luke.homeworld = "Dagobah";
+  }
+}
+
+// Probamos la función
+cambiarPlanetaSiEsLuke(starWarsInfo);
+console.log(starWarsInfo.movie.characters.main.homeworld); // Debería imprimir "Dagobah" si era "Tatooine"
 
 //### **Ejercicio 2: Agregar un aliado si el personaje es "Darth Vader"**
 
@@ -67,32 +61,31 @@ function cambiarPlanetaSiEsLuke(data) {
 
 //1. **Leer y comprender el enunciado**
 
-   //- Objetivo: Añadir "Grand Moff Tarkin" a `allies` de Darth Vader si no existe ya en el array.
-   //- Datos iniciales: JSON `starWarsInfo`, el array `allies` está en `movie.characters.villain.allies`.
+//- Objetivo: Añadir "Grand Moff Tarkin" a `allies` de Darth Vader si no existe ya en el array.
+//- Datos iniciales: JSON `starWarsInfo`, el array `allies` está en `movie.characters.villain.allies`.
 
 //2. **Dividir el problema en partes**
 
-   //- Paso 1: Acceder a `movie.characters.villain`.
-   //- Paso 2: Verificar si "Grand Moff Tarkin" ya está en el array `allies`.
-   //- Paso 3: Si no está, añadirlo al array.
+//- Paso 1: Acceder a `movie.characters.villain`.
+//- Paso 2: Verificar si "Grand Moff Tarkin" ya está en el array `allies`.
+//- Paso 3: Si no está, añadirlo al array.
 
 //3. **Código**
 
 function agregarAliadoSiEsDarthVader(data) {
-    const darthVader = data.movie.characters.villain;
-  
-    if (
-      darthVader.name === "Darth Vader" &&
-      !darthVader.allies.includes("Grand Moff Tarkin")
-    ) {
-      darthVader.allies.push("Grand Moff Tarkin");
-    }
+  const darthVader = data.movie.characters.villain;
+
+  if (
+    darthVader.name === "Darth Vader" &&
+    !darthVader.allies.includes("Grand Moff Tarkin")
+  ) {
+    darthVader.allies.push("Grand Moff Tarkin");
   }
-  
-  // Probamos la función
-  agregarAliadoSiEsDarthVader(starWarsInfo);
-  console.log(starWarsInfo.movie.characters.villain.allies); // Debería incluir "Grand Moff Tarkin" si no estaba antes
-  
+}
+
+// Probamos la función
+agregarAliadoSiEsDarthVader(starWarsInfo);
+console.log(starWarsInfo.movie.characters.villain.allies); // Debería incluir "Grand Moff Tarkin" si no estaba antes
 
 //### **Ejercicio 3: Actualizar el nombre del director si el año de estreno es anterior a 1980**
 
@@ -102,31 +95,28 @@ function agregarAliadoSiEsDarthVader(data) {
 
 //1. **Leer y comprender el enunciado**
 
-   //- Objetivo: Cambiar el nombre del director a "Irvin Kershner" si `release_year` es menor que 1980.
-   //- Datos iniciales: JSON `starWarsInfo`, el año está en `movie.release_year`.
+//- Objetivo: Cambiar el nombre del director a "Irvin Kershner" si `release_year` es menor que 1980.
+//- Datos iniciales: JSON `starWarsInfo`, el año está en `movie.release_year`.
 
 //2. **Dividir el problema en partes**
 
-   //- Paso 1: Acceder a `movie.release_year`.
-   //- Paso 2: Verificar si `release_year` es menor que 1980.
-   //- Paso 3: Si se cumple la condición, cambiar `director` a "Irvin Kershner".
+//- Paso 1: Acceder a `movie.release_year`.
+//- Paso 2: Verificar si `release_year` es menor que 1980.
+//- Paso 3: Si se cumple la condición, cambiar `director` a "Irvin Kershner".
 
 //3. **Código**
 
 function cambiarDirectorSiAnteriorA1980(data) {
-    const movie = data.movie;
-  
-    if (movie.release_year < 1980) {
-      movie.director = "Irvin Kershner";
-    }
+  const movie = data.movie;
+
+  if (movie.release_year < 1980) {
+    movie.director = "Irvin Kershner";
   }
-  
-  // Probamos la función
-  cambiarDirectorSiAnteriorA1980(starWarsInfo);
-  console.log(starWarsInfo.movie.director); // Debería imprimir "Irvin Kershner" si el año era anterior a 1980
-    
+}
 
-
+// Probamos la función
+cambiarDirectorSiAnteriorA1980(starWarsInfo);
+console.log(starWarsInfo.movie.director); // Debería imprimir "Irvin Kershner" si el año era anterior a 1980
 
 //### **Ejercicio 4: Eliminar un aliado de Luke Skywalker si el nombre es "Obi-Wan Kenobi"**
 
@@ -136,35 +126,31 @@ function cambiarDirectorSiAnteriorA1980(data) {
 
 //1. **Leer y comprender el enunciado**
 
-   //- Objetivo: Eliminar "Obi-Wan Kenobi" de `allies` de Luke solo si está en el array.
-   //- Datos iniciales: JSON `starWarsInfo`, el array `allies` de Luke está en `movie.characters.main.allies`.
+//- Objetivo: Eliminar "Obi-Wan Kenobi" de `allies` de Luke solo si está en el array.
+//- Datos iniciales: JSON `starWarsInfo`, el array `allies` de Luke está en `movie.characters.main.allies`.
 
 //2. **Dividir el problema en partes**
 
-   //- Paso 1: Acceder al array `allies` de Luke.
-   //- Paso 2: Verificar si "Obi-Wan Kenobi" está en el array.
-   //- Paso 3: Si está, encontrar su índice y eliminarlo.
+//- Paso 1: Acceder al array `allies` de Luke.
+//- Paso 2: Verificar si "Obi-Wan Kenobi" está en el array.
+//- Paso 3: Si está, encontrar su índice y eliminarlo.
 
 //3. **Código**
 
 function eliminarAliadoSiEsObiWan(data) {
-    const luke = data.movie.characters.main;
-    const index = luke.allies.indexOf("Obi-Wan Kenobi");
-  
-    if (index > -1) {
-      luke.allies.splice(index, 1);
-    }
+  const luke = data.movie.characters.main;
+  const index = luke.allies.indexOf("Obi-Wan Kenobi");
+
+  if (index > -1) {
+    luke.allies.splice(index, 1);
   }
-  
-  // Probamos la función
-  eliminarAliadoSiEsObiWan(starWarsInfo);
-  console.log(starWarsInfo.movie.characters.main.allies); // No debería incluir "Obi-Wan Kenobi" si estaba antes
-  
+}
 
+// Probamos la función
+eliminarAliadoSiEsObiWan(starWarsInfo);
+console.log(starWarsInfo.movie.characters.main.allies); // No debería incluir "Obi-Wan Kenobi" si estaba antes
 
-
-
-    //### **Ejercicio 5: Cambiar la especie de Darth Vader a "Sith" si su nombre es "Anakin Skywalker"**
+//### **Ejercicio 5: Cambiar la especie de Darth Vader a "Sith" si su nombre es "Anakin Skywalker"**
 
 //#### Enunciado
 
@@ -172,36 +158,73 @@ function eliminarAliadoSiEsObiWan(data) {
 
 //1. **Leer y comprender el enunciado**
 
-   //- Objetivo: Cambiar `species` de Darth Vader a "Sith" solo si su `name` es "Anakin Skywalker".
-   //- Datos iniciales: JSON `starWarsInfo`, el nombre y la especie están en `movie.characters.villain`.
+//- Objetivo: Cambiar `species` de Darth Vader a "Sith" solo si su `name` es "Anakin Skywalker".
+//- Datos iniciales: JSON `starWarsInfo`, el nombre y la especie están en `movie.characters.villain`.
 
 //2. **Dividir el problema en partes**
 
-   //- Paso 1: Acceder a `movie.characters.villain`.
-   //- Paso 2: Verificar si `name` es "Anakin Skywalker".
-   //- Paso 3: Si se cumple la condición, cambiar `species` a "Sith".
-function cambiEspecie (data) {
+//- Paso 1: Acceder a `movie.characters.villain`.
+//- Paso 2: Verificar si `name` es "Anakin Skywalker".
+//- Paso 3: Si se cumple la condición, cambiar `species` a "Sith".
+function cambiEspecie(data) {
   let nuevaEspecie = data.movie.characters.villain;
- 
-  if (nuevaEspecie.species  === "Anakin Skywalker" ) {
-      nuevaEspecie.species ="Sith" ;
-    }
-    
+
+  if (nuevaEspecie.species === "Anakin Skywalker") {
+    nuevaEspecie.species = "Sith";
   }
-  console.log(cambiEspecie(starWarsInfo));
-  console.log(starWarsInfo.movie.characters.villain.species);
-  
+}
+console.log(cambiEspecie(starWarsInfo));
+console.log(starWarsInfo.movie.characters.villain.species);
 
+// ### **Ejercicio 6: Cambiar el estatus de Darth Vader y añadir un nuevo aliado a Luke Skywalker**
 
+//#### Enunciado
 
- 
+//Usando el JSON `starWarsInfo` proporcionado, realiza las siguientes modificaciones si se cumplen las condiciones descritas:
 
+//6.1. Cambia la especie de Darth Vader a `"Sith Lord"` y añade `"Boba Fett"` a su lista de aliados, pero solo si su nombre es `"Darth Vader"` **y** su planeta de origen (`homeworld`) es `"Tatooine"`.
 
+function actualizavalores(data) {
+  let aliado = data.movie.characters.villain;
 
+  if (aliado.name === "Darth Vader" && aliado.homeworld === "Tatooine") {
+    aliado.especies = "Sith Lord";
+  }
+  aliado.allies.push("boda fett");
+}
+console.log(actualizavalores(starWarsInfo));
+console.log(starWarsInfo.movie.characters.villain);
 
+//6.2. Si la lista de aliados de Luke Skywalker contiene a `"Obi-Wan Kenobi"`, añade también a `"Yoda"` como su aliado.
 
+function masaliados(data) {
+  let luke = data.movie.characters.main;
+  if (luke.allies.includes("Obi-Wan Kenobi")) {
+    luke.allies.push("Yoda");
+  }
+}
+masaliados(starWarsInfo);
+console.log(starWarsInfo.movie.characters.main.allies);
 
+//6.3. Verifica si el director de la película es `"George Lucas"` y, si es así,
+//añade una nueva propiedad `producer` con el valor `"Lucasfilm"` en el nivel de la película.
 
+function añadirNuevaPropiedad(data) {
+  let pelicula = data.movie;
+  if (pelicula.director === "George Lucas") {
+    pelicula.movie.producer = "Lucasfilm";
+  }
+}
+añadirNuevaPropiedad(starWarsInfo);
+console.log(starWarsInfo.movie);
 
-    
-
+//6.4. **Bonus**: Si el año de lanzamiento (`release_year`) es anterior a 1980,
+//cambia el título (`title`) de la película a `"Star Wars: Episode IV - A New Hope"`.
+function cambioDeTitulo(data) {
+  let documetoPelucula = data.movie;
+  if (documetoPelucula.release_year < 1980) {
+    documetoPelucula.title = "Star Wars: Episode IV - A New Hope";
+  }
+}
+cambioDeTitulo(starWarsInfo);
+console.log(starWarsInfo.movie);
