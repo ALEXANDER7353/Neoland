@@ -1,54 +1,38 @@
-const starWarsDatabase = {
-  movies: [
-    {
-      title: "A New Hope",
-      release_year: 1977,
-      characters: [
-        { name: "Luke Skywalker", homeworld: "Tatooine", species: "Human" },
-        { name: "Darth Vader", homeworld: "Tatooine", species: "Human" },
-      ],
-      starships: [
-        { name: "X-wing", model: "T-65 X-wing" },
-        { name: "TIE Advanced x1", model: "Twin Ion Engine" },
-      ],
-    },
-    {
-      title: "The Empire Strikes Back",
-      release_year: 1980,
-      characters: [
-        { name: "Yoda", homeworld: "Dagobah", species: "Unknown" },
-        { name: "Han Solo", homeworld: "Corellia", species: "Human" },
-      ],
-      starships: [
-        { name: "Millennium Falcon", model: "YT-1300" },
-        { name: "Slave I", model: "Firespray-31" },
-      ],
-    },
+const usuariosData = {
+  usuarios: [
+    { nombre: "Ana Pérez", edad: "25", ciudad: "Madrid" },
+    { nombre: "Carlos García", edad: "32", ciudad: "Barcelona" },
+    { nombre: "Luisa Fernández", edad: "28", ciudad: "Sevilla" },
+    { nombre: "José López", edad: "45", ciudad: "Valencia" },
+    { nombre: "Marta Sánchez", edad: "31", ciudad: "Bilbao" },
   ],
 };
 
-//### **Ejercicio 5: Crear un resumen de personajes por especie**
+//Ejercicio 1: Iniciales de nombres completos
 
-//#### Enunciado
+//Objetivo: Obtener las iniciales de cada nombre completo.
+//Proceso: La función auxiliar obtenerIniciales divide el nombre completo en palabras
+// y toma la primera letra de cada palabra.
+//La función principal obtenerInicialesLista aplica esta función a cada nombre
+// en la lista.
+function obtenerIniciales(usuario) {
+  const iniciales = usuario.nombre
+    .split(" ")
+    .map((palabra) => palabra[0])
+    .join("");
 
-//Queremos una función que recorra todas las películas y agrupe los personajes por especie en un objeto.
-
-function personajePorEspecie(data) {
-  const resumen = [];
-  const personajes1 = data.movies;
-
-  for (let a = 0; a < personajes1.length; a++) {
-    const persona = personajes1[a];
-    const info = persona.characters;
-
-    for (let indexx = 0; indexx < info.length; indexx++) {
-      const datosPersonaje = info[indexx];
-      const datosfinal = `tipo de especie es : ${datosPersonaje.species}`;
-      resumen.push(datosfinal);
-    }
-  }
-
-  return resumen;
+  return `nombre:${usuario.nombre} inicial:${iniciales}`;
 }
 
-personajePorEspecie(starWarsDatabase);
+function obtenerInicialesLista(data) {
+  const nombresDePersonas = data.usuarios;
+
+  const primeraLetra = nombresDePersonas.map((usuario) =>
+    obtenerIniciales(usuario)
+  
+
+  );
+  console.log("🚀 ~ obtenerInicialesLista ~ primeraLetra:", primeraLetra)
+}
+
+obtenerInicialesLista(usuariosData);
