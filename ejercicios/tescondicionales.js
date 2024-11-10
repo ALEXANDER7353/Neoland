@@ -49,7 +49,6 @@ function cambiarPlanetaSiEsLuke(data) {
   }
 }
 
-// Probamos la función
 cambiarPlanetaSiEsLuke(starWarsInfo);
 console.log(starWarsInfo.movie.characters.main.homeworld); // Debería imprimir "Dagobah" si era "Tatooine"
 

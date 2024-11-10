@@ -1,38 +1,17 @@
-const usuariosData = {
-  usuarios: [
-    { nombre: "Ana Pérez", edad: "25", ciudad: "Madrid" },
-    { nombre: "Carlos García", edad: "32", ciudad: "Barcelona" },
-    { nombre: "Luisa Fernández", edad: "28", ciudad: "Sevilla" },
-    { nombre: "José López", edad: "45", ciudad: "Valencia" },
-    { nombre: "Marta Sánchez", edad: "31", ciudad: "Bilbao" },
-  ],
-};
+//### **Ejercicio 3: Encontrar el primer número impar**
 
-//Ejercicio 1: Iniciales de nombres completos
+//**Descripción**: Dado un array de números, usa `find` para encontrar el primer número impar.
 
-//Objetivo: Obtener las iniciales de cada nombre completo.
-//Proceso: La función auxiliar obtenerIniciales divide el nombre completo en palabras
-// y toma la primera letra de cada palabra.
-//La función principal obtenerInicialesLista aplica esta función a cada nombre
-// en la lista.
-function obtenerIniciales(usuario) {
-  const iniciales = usuario.nombre
-    .split(" ")
-    .map((palabra) => palabra[0])
-    .join("");
 
-  return `nombre:${usuario.nombre} inicial:${iniciales}`;
-}
+const numeros5 = [4, 8, 12, 13, 18, 21];
+const primerImpar = numeros5.find((numero)=>numero % 2 !== 0);
 
-function obtenerInicialesLista(data) {
-  const nombresDePersonas = data.usuarios;
+console.log(primerImpar); // Debería mostrar 13
 
-  const primeraLetra = nombresDePersonas.map((usuario) =>
-    obtenerIniciales(usuario)
-  
 
-  );
-  console.log("🚀 ~ obtenerInicialesLista ~ primeraLetra:", primeraLetra)
-}
+//**Pista**: Un número es impar si `numero % 2 !== 0`.
 
-obtenerInicialesLista(usuariosData);
+//**Explicación**:
+
+//- `find` revisa cada número y verifica si es impar.
+//- Devuelve el primer número que cumple `numero % 2 !== 0` y detiene la búsqueda.
