@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokédex App</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <h1>Pokédex</h1>
+      <input type="text" id="search" placeholder="Buscar Pokémon..." />
+      <select id="type-filter">
+        <option value="">Filtrar por Tipo</option>
+        <!-- Los tipos de Pokémon se añadirán dinámicamente -->
+      </select>
+    </header>
+    <main id="pokemon-container"></main>
+    <div id="pagination"></div>
+  </div>
+  <script src="/main.js" type="module"></script>
+</body>
+
+</html>
