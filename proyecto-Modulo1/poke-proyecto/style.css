@@ -1,11 +1,23 @@
 body {
+
+
+
+
+
   font-family: Arial, sans-serif;
-  background-color: rgb(2, 255, 242)  ;
+  background-color: rgb(2, 255, 242);
   margin: 20;
   display: flex;
   justify-content: center;
-  font-style: italic; /* Hace que todo el texto sea cursivo */
+  font-style: italic;
+  /* Hace que todo el texto sea cursivo */
 }
+
+
+
+
+
+
 
 #app {
   max-width: 800px;
@@ -19,6 +31,16 @@ header {
   align-items: center;
   margin-bottom: 20px;
 }
+
+
+
+
+
+
+
+
+
+
 
 #search {
   padding: 8px;
@@ -38,35 +60,47 @@ main {
 }
 
 header h1 {
-  
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    text-shadow: 1px 1px 0px #000, -1px -1px 0px #000; /* Simula un contorno */
-  }
-  
- 
-  
+
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px #000, -1px -1px 0px #000;
+  /* Simula un contorno */
+}
+
+
+
 
 
 
 .card {
-  padding: 5px; /* Espacio interno */
-  border-radius: 35%; /* Hace que la tarjeta sea completamente redonda */
-  text-align: center; /* Centra el contenido dentro de la tarjeta */
-  background-color: rgb(2, 255, 242)  ; /* Se eliminará en el hover para usar el color de la imagen */
-  transition: transform 0.3s, background-color 0.3s; /* Suaviza las animaciones de transformación y color */
-  overflow: hidden; /* Asegura que nada sobresalga de los bordes redondeados */
+  padding: 5px;
+  /* Espacio interno */
+  border-radius: 35%;
+  /* Hace que la tarjeta sea completamente redonda */
+  text-align: center;
+  /* Centra el contenido dentro de la tarjeta */
+  background-color: rgb(2, 255, 242);
+  /* Se eliminará en el hover para usar el color de la imagen */
+  transition: transform 0.3s, background-color 0.3s;
+  /* Suaviza las animaciones de transformación y color */
+  overflow: hidden;
+  /* Asegura que nada sobresalga de los bordes redondeados */
 }
 
 .card img {
-  max-width: 100%; /* Ajusta las imágenes al ancho de la tarjeta */
-  height: auto; /* Mantiene las proporciones de las imágenes */
-  border-radius: 60%; /* Hace que la imagen también sea redonda */
+  max-width: 100%;
+  /* Ajusta las imágenes al ancho de la tarjeta */
+  height: auto;
+  /* Mantiene las proporciones de las imágenes */
+  border-radius: 60%;
+  /* Hace que la imagen también sea redonda */
 }
 
 .card:hover {
-  transform: scale(1.00); /* Agranda ligeramente la tarjeta al pasar el mouse */
-  background-color:    rgb(20, 198, 198); /* Toma el color principal del contenido */
+  transform: scale(1.00);
+  /* Agranda ligeramente la tarjeta al pasar el mouse */
+  background-color: rgb(20, 198, 198);
+  /* Toma el color principal del contenido */
 }
 
 
@@ -89,4 +123,3 @@ header h1 {
   background-color: #0073e6;
   color: white;
 }
-

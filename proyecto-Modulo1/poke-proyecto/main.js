@@ -25,12 +25,12 @@ const pokemonContainer = document.getElementById("pokemon-container");
 async function cargarpokemons() {
   const pokemons = await pedirPokemons();
 
-  // Asegúrate de que Pikachu esté en la lista
+  
   const pikachu = {
     name: "pikachu",
     url: "https://pokeapi.co/api/v2/pokemon/25/",
   };
-  pokemons.unshift(pikachu); // Lo agregamos al inicio de la lista
+  pokemons.unshift(pikachu); 
 
   const pokemonsConMasInfo = await Promise.all(
     pokemons.map((pokemon) => {
@@ -47,12 +47,12 @@ async function cargarpokemons() {
       const resultadoDiv = document.querySelector("#resultado");
 
       if (input) {
-        input.value = pokemon.name; // Actualizamos el valor del input
-        input.dispatchEvent(new Event("input")); // Disparamos el evento para que se ejecute la búsqueda
+        input.value = pokemon.name; 
+        input.dispatchEvent(new Event("input")); 
       }
 
       if (resultadoDiv) {
-        resultadoDiv.scrollIntoView({ behavior: "smooth" }); // Opcional: Mover la vista al resultado
+        resultadoDiv.scrollIntoView({ behavior: "smooth" }); 
       }
     });
 
