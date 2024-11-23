@@ -1,10 +1,5 @@
 body {
-
-
-
-
-
-  font-family: Arial, sans-serif;
+font-family: Arial, sans-serif;
   background-color: rgb(2, 255, 242);
   margin: 20;
   display: flex;
@@ -12,15 +7,8 @@ body {
   font-style: italic;
   /* Hace que todo el texto sea cursivo */
 }
-
-
-
-
-
-
-
 #app {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
   padding: 20px;
 }
@@ -32,7 +20,109 @@ header {
   margin-bottom: 20px;
 }
 
+/* Estilo general para la tarjeta */
+.card {
+  width: 200px; /* Reducido el ancho */
+  height: 280px; /* Reducido la altura */
+  background-color: #e0f7fa; /* Fondo azul claro */
+  border-radius: 8px; /* Bordes más redondeados */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+  margin: 10px; /* Margen más pequeño */
+  padding: 10px; /* Menos espacio interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Alinea el contenido verticalmente */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el tamaño y sombra */
+}
 
+/* Efecto hover para la tarjeta */
+.card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el ratón */
+}
+
+/* Título dentro de la tarjeta */
+.card .title {
+  font-size: 18px; /* Tamaño de fuente más pequeño */
+  font-weight: bold;
+  color: #00796b; /* Color de texto verde */
+  margin-bottom: 10px; /* Espacio entre el título y el contenido */
+}
+
+/* Descripción dentro de la tarjeta */
+.card .description {
+  font-size: 14px; /* Fuente más pequeña */
+  color: #004d40; /* Texto en un tono más oscuro */
+}
+
+
+/* Efecto de hover en la tarjeta */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo del nombre del Pokémon */
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo de la imagen del Pokémon */
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Estilo de los tipos de Pokémon */
+.card p {
+  font-size: 1rem;
+  color: #555;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Estilo para cada tipo de Pokémon (puedes agregar más según sea necesario) */
+.card p span {
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+/* Estilo para los tipos de Pokémon */
+.card p span.fire {
+  background-color: #fbbd23;
+}
+
+.card p span.water {
+  background-color: #4a90e2;
+}
+
+.card p span.grass {
+  background-color: #7ed957;
+}
+
+.card p span.electric {
+  background-color: #f7e500;
+}
+
+.card p span.ghost {
+  background-color: #7a62a3;
+}
+
+.card p span.bug {
+  background-color: #7bc74d;
+}
 
 
 
