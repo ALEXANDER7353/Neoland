@@ -1,0 +1,15 @@
+[
+    { "id": 1,
+      "nombre": "pedido navidad",
+      "productos" :[
+        "movil",
+        "audiculares"],
+
+        "precioTotal":650
+        
+
+
+
+
+    }
+]

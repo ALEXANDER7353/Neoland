@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "CHAMPÚ JHONSON",
+    "precio": 20
+  },
+  {
+    "id": 3,
+    "name": "Telefono Movil",
+    "precio": 300,
+    "marca": "Samsung"
+  },
+  {
+    "name": "Auriculares",
+    "precio": 60,
+    "id": 4
+  },
+  {
+    "name": "Telefono Movil",
+    "precio": 300,
+    "id": 5
+  }
+]
