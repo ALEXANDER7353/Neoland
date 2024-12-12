@@ -20,6 +20,16 @@ userSchema.pre('save', async function name(next) {
     next()
 })
 
+userSchema.pre('findOneAndUpdate', async function (next) {
+    const update = this.getUpdate()
+    console.log("🚀 MIDDLEWARE ~ update:", update)
+    if (update.password) {
+        const salt = await bcrypt.genSalt(10)
+        update.password = await bcrypt.hash(update.password, salt)
+    }
+    next()
+})
+
 
 userSchema.methods.matchPassword = async (password) => {
     return await bcrypt.compare(password, this.password)
@@ -29,6 +39,3 @@ userSchema.methods.matchPassword = async (password) => {
 const User = mongoose.model('User', userSchema)
 
 module.exports = User
-
-
-
