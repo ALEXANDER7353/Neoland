@@ -32,17 +32,27 @@ const deleteUser = async (req, res) => {
     }
 }
 
-
-const getUsers = async (req, res) => {
+const createUser = async (req, res) => {
     try {
-        const users = await User.find(); // Busca todos los usuarios en la base de datos
-        res.status(200).json(users); // Devuelve un JSON con la lista de usuarios
+        // Crear un nuevo usuario usando los datos del cuerpo de la solicitud
+        const newUser = new User({ ...req.body })
+
+        // Guardar el usuario en la base de datos
+        await newUser.save()
+
+        // Enviar el usuario creado como respuesta
+        res.status(201).json(newUser)
+
     } catch (error) {
-        console.error("🚀 ~ getUsers ~ error:", error); // Log para depurar
-        res.status(500).json({ errorMessage: 'Error retrieving users' }); // Error de servidor
+        console.log("🚀 ~ createUser ~ error:", error)
+
+        // Manejar errores, como validaciones fallidas
+        res.status(500).json({ errorMessage: 'Failed to create user' })
     }
-};
+}
 
 
 
-    module.exports = { updateUser, deleteUser,getUsers}
+
+
+    module.exports = { updateUser, deleteUser,createUser}
