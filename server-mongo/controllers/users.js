@@ -32,4 +32,17 @@ const deleteUser = async (req, res) => {
     }
 }
 
-module.exports = { updateUser, deleteUser }
+
+const getUsers = async (req, res) => {
+    try {
+        const users = await User.find(); // Busca todos los usuarios en la base de datos
+        res.status(200).json(users); // Devuelve un JSON con la lista de usuarios
+    } catch (error) {
+        console.error("🚀 ~ getUsers ~ error:", error); // Log para depurar
+        res.status(500).json({ errorMessage: 'Error retrieving users' }); // Error de servidor
+    }
+};
+
+
+
+    module.exports = { updateUser, deleteUser,getUsers}
