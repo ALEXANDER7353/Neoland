@@ -1,7 +1,7 @@
 const express = require('express')
 const connectDB = require('./config/db')
 const productRouter = require('./routes/products')
-
+const userRouter = require('./routes/users');
 
 
 
@@ -13,7 +13,7 @@ connectDB()
 
 server.use(express.json())
 server.use('/products', productRouter)
-
+server.use('/users', userRouter);
 
 
 
