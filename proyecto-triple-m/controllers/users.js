@@ -46,5 +46,22 @@ const readUser = async (req, res) => {
 };
 
 
+const updateUser = async (req, res) => {
 
-module.exports = {createUser,readUser };
+    try {
+        const user = await User.findByIdAndUpdate(req.params.id, { ...req.body })
+        if (!user) {
+            return res.status(404).json({ errorMessage: 'User not found' })
+        }
+        res.json(user)
+
+    } catch (error) {
+        res.status(500)
+    }
+}
+
+
+
+
+
+module.exports = {createUser,readUser,updateUser};
