@@ -24,4 +24,27 @@ const createUser = async (req, res) => {
 };
 
 
-module.exports = {createUser };
+const readUser = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        if (id) {
+            const user = await User.findById(id);
+            if (!user) {
+                return res.status(404).json({ message: 'User not found' });
+            }
+            return res.status(200).json(user);
+        }
+
+
+        const users = await User.find();
+        res.status(200).json(users);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Server error' });
+    }
+};
+
+
+
+module.exports = {createUser,readUser };
