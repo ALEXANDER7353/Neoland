@@ -1,22 +1,20 @@
-const express = require('express')
-const connectDB = require('./config/db')
-const productRouter = require('./routes/products')
-const userRouter = require('./routes/users');
+const express = require("express");
+const connectDB = require("./config/db");
+require("dotenv").config();
+const userRouter = require("./routes/users");
+const authRouter = require("./routes/auth");
+const productRouter = require("./routes/products");
 
+const server = express();
 
+connectDB();
 
-require('dotenv').config();
+server.use(express.json());
 
-const server = express()
-
-connectDB()
-
-server.use(express.json())
-server.use('/products', productRouter)
-server.use('/users', userRouter);
-
-
+server.use("/users", userRouter);
+server.use("/auth", authRouter);
+server.use("/products", productRouter);
 
 server.listen(3000, () => {
-    console.log('HOLA SERVIDOR')
-})
+  console.log("HOLA SERVIDOR");
+});
