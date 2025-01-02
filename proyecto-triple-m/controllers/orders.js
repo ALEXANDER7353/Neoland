@@ -91,4 +91,28 @@ const updateOrder = async (req, res) => {
     }
 }
 
-module.exports = { createOrder, getOrder, updateOrder }
+const deleteOrder = async (req, res) => {
+    try {
+        const order = await Order.findById(req.params.id)
+        if (!order) {
+            return res.status(404).json({ message: 'Orden no encontrada' })
+        }
+
+        
+        for (const item of order.products) {
+            const product = await Product.findById(item.product)
+            if (product) {
+                product.stock += item.quantity
+                await product.save()
+            }
+        }
+
+        await Order.findByIdAndDelete()
+        res.status(200).json({ message: 'Orden eliminada correctamente' })
+    } catch (error) {
+        console.log("🚀 ~ deleteOrder ~ error:", error)
+        res.status(500).json({ message: 'Error al eliminar la orden', error })
+    }
+}
+
+module.exports = { createOrder, getOrder, updateOrder, deleteOrder}
