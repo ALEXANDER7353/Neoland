@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 package-lock.jsonp
 package.json
+eslint.config.js
+package-lock.json
+package.json
+index.html
+public
+vite.config.js
