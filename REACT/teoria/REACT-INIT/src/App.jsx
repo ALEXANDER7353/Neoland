@@ -7,11 +7,22 @@ function App() {
   const [nombre, setNombre ] = useState("")
   const [apellido, setApellido ] = useState("")
   const[contador, setContador] = useState(0)
+  const [tareas, setTareas] = useState([])
+const [nuevaTarea, setNuevaTarea] = useState("")
 
-  return (
+
+const agregarTarea = () => { 
+  if (nuevaTarea.trim() !== "") {
+    setTareas([...tareas, nuevaTarea])
+    setNuevaTarea("")
+  }
+}
+
+return (
     <>
       <input type="text" placeholder="Nombre" onChange={(event)=>setNombre(event.target.value)} />
       <input type="text" placeholder="Apellido" onChange={(event)=>setApellido(event.target.value)} />
+      <input type="text" placeholder="Tarea" onChange={(event)=>setNuevaTarea(event.target.value)} />
       <h1>
   
      <Saludar nombre={nombre} apellido={ apellido} />
@@ -19,6 +30,8 @@ function App() {
       <h2>Contador: {contador}</h2>
       <button onClick={()=>setContador(contador + 1)}>Incrementar</button>
       <button onClick={()=>setContador(contador - 1)}>Decrementar</button>
+      <button onClick={agregarTarea}>Agregar tarea</button>
+      
     </>
   )
 }
