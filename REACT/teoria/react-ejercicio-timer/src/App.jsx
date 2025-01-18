@@ -13,7 +13,7 @@ useEffect(() => {
 
   return (
     <>
-    <h1>hora actual :{time.toLocaleTimeString()}</h1>
+    <h1>Hora Actual 🌞🌚 :{time.toLocaleTimeString()}</h1>
     </>
 
   )
