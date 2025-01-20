@@ -1,11 +1,11 @@
 import Tarjeta from './Tarjeta';
 import { tarjetas } from '../data/tarjetas';
-function ListaTarjetas({titulo, descripcion, mensajeInicial}) {
+function ListaTarjetas() {
 
     return (
         <div>
             {tarjetas.map((tarjeta) => (
-                <Tarjeta  {...tarjeta} />
+                <Tarjeta key={tarjeta.titulo}  {...tarjeta} />
             ))}
         </div>
     )
