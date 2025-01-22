@@ -1,10 +1,18 @@
-import { useState } from 'react'
+
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import useFetch from './hooks/useFetch'
+import { useState } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
+ const [url, setUrl] = useState("")
+ const {data, error, loading} = useFetch(url)
+
+
+
+  if(loading  ) return <h1>Loading...</h1>
+  if(error ) return <h1>Error en la peticion de los personajes</h1>
 
   return (
     <>
@@ -17,10 +25,17 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <input onChange={(e)=>setUrl(e.target.value)} defaultValue={url}/>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+
+      {
+        data?.map((character) => (
+          <div key={character.id}>
+            <h2>{character.name}</h2>
+            <img src={character.image} alt={character.name} />
+          </div>
+        ))
+      }
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
