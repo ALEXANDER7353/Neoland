@@ -1,20 +1,21 @@
-const jwt = require('jsonwebtoken')
+const jwt = require("jsonwebtoken");
 
-const authenticate = async (req, res, next) => {
-    const token = req.headers.authorization.split(' ')[1];
-    if (!token) {
-        return res.status(401).json({ message: 'No estas autorizado' })
-    }
-    try {
-        const decode = jwt.verify(token, process.env.JWT_SECRET)
-        console.log("🚀 ~ authenticate ~ decode:", decode)
-        next()
-    } catch (error) {
-        console.log("🚀 ~ authenticate ~ error:", error)
-        return res.status(401).json({ message: 'Token invalido' })
+const authenticate = (req, res, next) => {
+  const token = req.headers["authorization"];
 
-    }
+  if (!token || !token.startsWith("Bearer ")) {
+    return res
+      .status(401)
+      .json({ message: "No se proporcionó un token válido" });
+  }
 
-}
+  try {
+    const decoded = jwt.verify(token.split(" ")[1], process.env.JWT_SECRET);
+    req.user = decoded;
+    next();
+  } catch (error) {
+    return res.status(401).json({ message: "Token inválido o expirado" });
+  }
+};
 
-module.exports = authenticate
+module.exports = authenticate;
