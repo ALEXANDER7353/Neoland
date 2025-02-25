@@ -1,3 +1,4 @@
+//products controller
 const Product = require("../models/products");
 
 const createProduct = async (req, res) => {
